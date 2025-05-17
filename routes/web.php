@@ -13,7 +13,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/user-management', [UserController::class, 'index'])->middleware('auth')->name('users-management');
+/* Route::get('/user-management', [UserController::class, 'index'])->middleware('auth')->name('users-management'); */
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -21,9 +21,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('register', [RegisteredUserController::class, 'create'])
-    ->name('register');
+Route::group(['middleware' => ['auth', 'admin.only']], function () {
+    Route::get('/user-management', [UserController::class, 'index'])->name('users-management');
 
-Route::post('register', [RegisteredUserController::class, 'store']);
+    Route::get('register', [RegisteredUserController::class, 'create'])
+    ->name('register');
+    
+    Route::post('register', [RegisteredUserController::class, 'store']);
+});
 
 require __DIR__.'/auth.php';

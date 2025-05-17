@@ -33,6 +33,27 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    //Função
+    const ROLE_ADMIN = 'Administrador';
+    const ROLE_ESTOQUE = 'Estoque';
+    const ROLE_ATENDENTE = 'Atendente';
+
+    public function isAdmin()
+    {
+        return $this->role === self::ROLE_ADMIN;
+    }
+
+    public function isEstoque()
+    {
+        return $this->role === self::ROLE_ESTOQUE;
+    }
+
+    public function isAtendente()
+    {
+        return $this->role === self::ROLE_ATENDENTE;
+    }
+
+
     /**
      * Get the attributes that should be cast.
      *
