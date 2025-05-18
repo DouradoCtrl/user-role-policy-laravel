@@ -11,8 +11,13 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->alias([
+            'admin.only' => \App\Http\Middleware\AdminOnly::class,
+            'atendente'  => \App\Http\Middleware\Atendente::class,
+            'estoque'    => \App\Http\Middleware\Estoque::class,
+        ]);
     })
+    
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
