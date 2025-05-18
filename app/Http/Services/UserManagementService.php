@@ -52,50 +52,12 @@ class UserManagementService
             throw new \Exception('ID do usuário não encontrado.');
         }
 
-        // Log para debug
-        Log::info('Tentando atualizar usuário', [
-            'user_id' => $userId,
-            'data' => $data
-        ]);
-
         // Buscar e atualizar o usuário
         $userToUpdate = User::findOrFail($userId);
-        
-        // Log para debug antes de atualizar
-        Log::info('Usuário antes da atualização', [
-            'id' => $userToUpdate->id,
-            'name' => $userToUpdate->name,
-            'email' => $userToUpdate->email,
-            'role' => $userToUpdate->role
-        ]);
-        
-        // Tentar primeiro com o método update
-        $updated = $userToUpdate->update([
+        $userToUpdate->update([
             'name' => $data['name'],
             'email' => $data['email'],
             'role' => $data['role']
-        ]);
-        
-        // Se a atualização falhar, tente atribuir diretamente
-        if (!$updated) {
-            $userToUpdate->name = $data['name'];
-            $userToUpdate->email = $data['email'];
-            $userToUpdate->role = $data['role'];
-            $userToUpdate->save();
-        }
-        
-        // Recarregar o modelo para ter certeza que está atualizado
-        $userToUpdate = User::findOrFail($userId);
-        
-        // Log para debug após atualizar
-        Log::info('Resultado da atualização', [
-            'success' => $updated,
-            'user_após' => [
-                'id' => $userToUpdate->id,
-                'name' => $userToUpdate->name,
-                'email' => $userToUpdate->email,
-                'role' => $userToUpdate->role
-            ]
         ]);
 
         return true;
