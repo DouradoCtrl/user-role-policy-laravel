@@ -16,6 +16,22 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+
+                @can('estoque')
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('produtos')" :active="request()->routeIs('produtos')">
+                        {{ __('Produtos') }}
+                    </x-nav-link>
+                </div>
+                @endcan
+                
+                @can('atendente')
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('pedidos')" :active="request()->routeIs('pedidos')">
+                        {{ __('Pedidos') }}
+                    </x-nav-link>
+                </div>
+                @endcan
             </div>
 
             <!-- Settings Dropdown -->

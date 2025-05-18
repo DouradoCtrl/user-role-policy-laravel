@@ -9,11 +9,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
-/* Route::get('/user-management', [UserController::class, 'index'])->middleware('auth')->name('users-management'); */
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->middleware('verified')->name('dashboard');
+
+    Route::get('/produtos', function () {
+        return view('produtos');
+    })->name('produtos')->middleware('estoque');
+
+    Route::get('/pedidos', function () {
+        return view('pedidos');
+    })->name('pedidos')->middleware('atendente');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
