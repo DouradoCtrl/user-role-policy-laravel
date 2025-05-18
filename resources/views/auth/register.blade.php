@@ -41,7 +41,7 @@
 
         <!-- Cargo -->
         <div class="mt-4">
-            <x-input-label for="role" :value="__('Cargo')" />
+            <x-input-label for="role" :value="__('Permissão')" />
             <select id="role" name="role" class="block mt-1 w-full rounded-md border-gray-300 shadow-sm focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
                 <option value="Administrador">Administrador</option>
                 <option value="Estoque">Estoque</option>
