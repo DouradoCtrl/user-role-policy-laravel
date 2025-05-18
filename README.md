@@ -18,7 +18,7 @@ As imagens abaixo mostram as principais telas do sistema de gerenciamento de usu
 
 <table>
   <tr>
-    <td align="center" style="padding: 15px;">
+    <td align="center">
       <p><strong>User Management</strong></p>
       <img src="imagens-repo/overviewUsers.png" alt="Visão Geral de Usuários" width="800" style="border-radius: 15px;"/>
     </td>
@@ -29,21 +29,21 @@ As imagens abaixo mostram as principais telas do sistema de gerenciamento de usu
 
 <table>
   <tr>
-    <td width="50%" align="center" style="padding: 15px;">
+    <td width="50%" align="center">
       <p><strong>Tela de Login</strong></p>
       <img src="imagens-repo/login-user.png" alt="Tela de Login" width="380" style="border-radius: 15px;"/>
     </td>
-    <td width="50%" align="center" style="padding: 15px;">
+    <td width="50%" align="center">
       <p><strong>Adicionar Usuário</strong></p>
       <img src="imagens-repo/add-user-modal.png" alt="Modal de Adição de Usuário" width="380" style="border-radius: 15px;"/>
     </td>
   </tr>
   <tr>
-    <td width="50%" align="center" style="padding: 15px;">
+    <td width="50%" align="center">
       <p><strong>Editar Usuário</strong></p>
       <img src="imagens-repo/edit-user-modal.png" alt="Modal de Edição de Usuário" width="380" style="border-radius: 15px;"/>
     </td>
-    <td width="50%" align="center" style="padding: 15px;">
+    <td width="50%" align="center">
       <p><strong>Excluir Usuário</strong></p>
       <img src="imagens-repo/delete-user-modal.png" alt="Modal de Exclusão de Usuário" width="380" style="border-radius: 15px;"/>
     </td>
