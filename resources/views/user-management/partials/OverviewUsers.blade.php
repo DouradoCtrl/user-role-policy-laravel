@@ -6,7 +6,6 @@
             </h2>
             <a href="{{ route('register') }}">
                 <x-primary-button class="flex items-center">
-                    <!-- <x-heroicon-o-plus class="h-4 w-4" /> -->
                     {{ __('Adicionar') }}
                 </x-primary-button>
             </a>
@@ -24,7 +23,7 @@
                     <th class="px-6 py-3 text-left text-xs font-medium text-gray-500  uppercase tracking-wider">ID</th>
                     <th class="px-6 py-3 text-left text-xs font-medium text-gray-500  uppercase tracking-wider">Nome</th>
                     <th class="px-6 py-3 text-left text-xs font-medium text-gray-500  uppercase tracking-wider">E-mail</th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500  uppercase tracking-wider">Cargo</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500  uppercase tracking-wider">Permissão</th>
                     <th class="px-6 py-3 text-left text-xs font-medium text-gray-500  uppercase tracking-wider">Ações</th>
                 </tr>
             </thead>
@@ -41,8 +40,13 @@
                                     <x-heroicon-o-pencil class="h-4 w-4" />
                                 </x-primary-button>
                                 <x-danger-button
-                                    x-data=""
-                                    x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"
+                                    x-data
+                                    x-on:click.prevent="
+                                        $dispatch('set-user-id', {{ $user->id }});
+                                        setTimeout(() => {
+                                            $dispatch('open-modal', 'confirm-user-deletion');
+                                        }, 50);
+                                    "
                                     class="px-4 py-2 flex items-center"
                                     title="Excluir"
                                 >
