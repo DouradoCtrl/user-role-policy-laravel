@@ -41,6 +41,8 @@ Route::group(['middleware' => ['auth', 'admin.only']], function () {
     ->name('register');
     
     Route::post('register', [RegisteredUserController::class, 'store']);
+
+    Route::delete('/user-management', [UserController::class, 'destroy'])->name('user.destroy');
 });
 
 require __DIR__.'/auth.php';
