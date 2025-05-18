@@ -12,7 +12,45 @@
 ### Imagens
 As imagens abaixo mostram as principais telas do sistema de gerenciamento de usuários:
 
-*(em desenvolvimento - serão adicionadas capturas de tela do painel de controle, modais de gerenciamento de usuários e páginas de perfil)*
+<div align="center">
+
+#### Visão Geral do Sistema
+
+<table>
+  <tr>
+    <td align="center">
+      <p><strong>User Management</strong></p>
+      <img src="imagens-repo/overviewUsers.png" alt="Visão Geral de Usuários" width="800" style="border-radius: 15px;"/>
+    </td>
+  </tr>
+</table>
+
+#### Interface e Funcionalidades
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <p><strong>Tela de Login</strong></p>
+      <img src="imagens-repo/login-user.png" alt="Tela de Login" width="380" style="border-radius: 15px;"/>
+    </td>
+    <td width="50%" align="center">
+      <p><strong>Adicionar Usuário</strong></p>
+      <img src="imagens-repo/add-user-modal.png" alt="Modal de Adição de Usuário" width="380" style="border-radius: 15px;"/>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <p><strong>Editar Usuário</strong></p>
+      <img src="imagens-repo/edit-user-modal.png" alt="Modal de Edição de Usuário" width="380" style="border-radius: 15px;"/>
+    </td>
+    <td width="50%" align="center">
+      <p><strong>Excluir Usuário</strong></p>
+      <img src="imagens-repo/delete-user-modal.png" alt="Modal de Exclusão de Usuário" width="380" style="border-radius: 15px;"/>
+    </td>
+  </tr>
+</table>
+
+</div>
 
 ### Descrição
 Este projeto implementa um sistema completo de gerenciamento de usuários (CRUD) sobre o autenticador Laravel Breeze, com uma página de gestão construída com Tailwind CSS e Alpine.js. O sistema permite criar, visualizar, editar e excluir usuários de forma intuitiva através de modais interativos.
@@ -103,6 +141,12 @@ php artisan tinker
     'role' => 'Administrador'
 ]);
 ```
+
+6. Iniciar Seeders
+```bash
+php artisan db:seed
+```
+
 
 ### Arquitetura e Estrutura
 

@@ -17,7 +17,7 @@ class UserController extends Controller
     }
 
     public function index() {
-        $users = User::paginate(3); // Paginate users, 3 per page
+        $users = User::paginate(10); // Paginate users, 3 per page
         return view('user-management.index', compact('users'));
     }
 
