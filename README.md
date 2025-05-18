@@ -104,6 +104,12 @@ php artisan tinker
 ]);
 ```
 
+6. Iniciar Seeders
+```bash
+php artisan db:seed
+```
+
+
 ### Arquitetura e Estrutura
 
 O projeto segue as melhores práticas de desenvolvimento Laravel, com foco na separação de responsabilidades:
