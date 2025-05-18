@@ -36,7 +36,21 @@
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 ">{{ $user->role }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 ">
                             <div class="flex gap-2">
-                                <x-primary-button class="px-4 py-2 flex items-center" title="Editar">
+                                <x-primary-button 
+                                    x-data
+                                    x-on:click.prevent="
+                                        $dispatch('set-user-data', {
+                                            id: {{ $user->id }},
+                                            name: '{{ $user->name }}',
+                                            email: '{{ $user->email }}',
+                                            role: '{{ $user->role }}'
+                                        });
+                                        setTimeout(() => {
+                                            $dispatch('open-modal', 'edit-user-modal');
+                                        }, 50);
+                                    "
+                                    class="px-4 py-2 flex items-center" 
+                                    title="Editar">
                                     <x-heroicon-o-pencil class="h-4 w-4" />
                                 </x-primary-button>
                                 <x-danger-button
