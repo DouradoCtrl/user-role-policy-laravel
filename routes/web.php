@@ -22,6 +22,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/pedidos', function () {
         return view('pedidos');
     })->name('pedidos')->middleware('atendente');
+
+    Route::get('/rastreio-atividades', function () {
+        return view('rastreio-atividades');
+    })->name('rastreio-atividades')->middleware('admin.only');
 });
 
 Route::middleware('auth')->group(function () {
