@@ -4,11 +4,13 @@
             <h2 class="text-lg font-medium text-gray-900">
                 {{ __('Usuários do sistema') }}
             </h2>
-            <a href="{{ route('register') }}">
-                <x-primary-button class="flex items-center">
-                    {{ __('Adicionar') }}
-                </x-primary-button>
-            </a>
+            <x-primary-button 
+                x-data
+                x-on:click.prevent="$dispatch('open-modal', 'add-user-modal')"
+                class="flex items-center"
+            >
+                {{ __('Adicionar') }}
+            </x-primary-button>
         </div>
 
         <p class="mt-1 text-sm text-gray-600">

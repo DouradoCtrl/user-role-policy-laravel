@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Http\Services\UserManagementService;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\ValidationException;
 
 class UserController extends Controller
@@ -53,14 +52,6 @@ class UserController extends Controller
             'email' => 'required|string|email|max:255|unique:users,email,' . $request->user_id,
             'role' => 'required|string|in:Administrador,Estoque,Atendente',
             'password' => 'required', // Senha do usuário logado para confirmação
-        ]);
-        
-        // Log para debug
-        Log::info('Dados recebidos no controller', [
-            'user_id' => $request->user_id,
-            'name' => $request->name,
-            'email' => $request->email,
-            'role' => $request->role
         ]);
         
         try {

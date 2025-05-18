@@ -61,4 +61,14 @@
             @include('user-management.partials.edit-user-form')
         </div>
     </x-modal>
+    
+    <!-- Modal para adicionar novo usuário -->
+    <x-modal name="add-user-modal" :show="$errors->userCreate->isNotEmpty()" focusable>
+        <div>
+            <h2 class="p-6 pb-0 text-lg font-medium text-gray-900">
+                {{ __('Adicionar Novo Usuário') }}
+            </h2>
+            @include('user-management.partials.add-user-form')
+        </div>
+    </x-modal>
 </x-app-layout>
