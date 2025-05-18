@@ -20,9 +20,7 @@ As imagens abaixo mostram as principais telas do sistema de gerenciamento de usu
   <tr>
     <td align="center" style="padding: 15px;">
       <p><strong>User Management</strong></p>
-      <kbd>
-        <img src="imagens-repo/overviewUsers.png" alt="Visão Geral de Usuários" width="800"/>
-      </kbd>
+      <img src="imagens-repo/overviewUsers.png" alt="Visão Geral de Usuários" width="800" style="border-radius: 15px;"/>
     </td>
   </tr>
 </table>
@@ -33,29 +31,21 @@ As imagens abaixo mostram as principais telas do sistema de gerenciamento de usu
   <tr>
     <td width="50%" align="center" style="padding: 15px;">
       <p><strong>Tela de Login</strong></p>
-      <kbd>
-        <img src="imagens-repo/login-user.png" alt="Tela de Login" width="380"/>
-      </kbd>
+      <img src="imagens-repo/login-user.png" alt="Tela de Login" width="380" style="border-radius: 15px;"/>
     </td>
     <td width="50%" align="center" style="padding: 15px;">
       <p><strong>Adicionar Usuário</strong></p>
-      <kbd>
-        <img src="imagens-repo/add-user-modal.png" alt="Modal de Adição de Usuário" width="380"/>
-      </kbd>
+      <img src="imagens-repo/add-user-modal.png" alt="Modal de Adição de Usuário" width="380" style="border-radius: 15px;"/>
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" style="padding: 15px;">
       <p><strong>Editar Usuário</strong></p>
-      <kbd>
-        <img src="imagens-repo/edit-user-modal.png" alt="Modal de Edição de Usuário" width="380"/>
-      </kbd>
+      <img src="imagens-repo/edit-user-modal.png" alt="Modal de Edição de Usuário" width="380" style="border-radius: 15px;"/>
     </td>
     <td width="50%" align="center" style="padding: 15px;">
       <p><strong>Excluir Usuário</strong></p>
-      <kbd>
-        <img src="imagens-repo/delete-user-modal.png" alt="Modal de Exclusão de Usuário" width="380"/>
-      </kbd>
+      <img src="imagens-repo/delete-user-modal.png" alt="Modal de Exclusão de Usuário" width="380" style="border-radius: 15px;"/>
     </td>
   </tr>
 </table>
